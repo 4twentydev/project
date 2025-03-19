@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 150 10% 97%;
+  --foreground: 150 10% 3.9%;
+  --card: 150 10% 98%;
+  --card-foreground: 150 10% 3.9%;
+  --popover: 150 10% 98%;
+  --popover-foreground: 150 10% 3.9%;
+  --primary: 88 100% 50%;
+  --primary-foreground: 150 10% 98%;
+  --secondary: 150 5% 96%;
+  --secondary-foreground: 150 10% 3.9%;
+  --muted: 150 5% 96%;
+  --muted-foreground: 150 5% 45%;
+  --accent: 150 5% 96%;
+  --accent-foreground: 150 10% 3.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 150 10% 98%;
+  --border: 150 5% 90%;
+  --input: 150 5% 90%;
+  --ring: 142 76% 36%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 150 10% 3.9%;
+  --foreground: 150 10% 98%;
+  --card: 150 10% 3.9%;
+  --card-foreground: 150 10% 98%;
+  --popover: 150 10% 3.9%;
+  --popover-foreground: 150 10% 98%;
+  --primary: 88 100% 50%;
+  --primary-foreground: 150 10% 3.9%;
+  --secondary: 150 5% 12%;
+  --secondary-foreground: 150 10% 98%;
+  --muted: 150 5% 12%;
+  --muted-foreground: 150 5% 65%;
+  --accent: 150 5% 12%;
+  --accent-foreground: 150 10% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 150 10% 98%;
+  --border: 150 5% 12%;
+  --input: 150 5% 12%;
+  --ring: 142 76% 46%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.section {
+  @apply min-h-screen w-full snap-start;
+}
+
+.glow {
+  @apply relative;
+}
+
+.glow::after {
+  content: "";
+  @apply absolute inset-0 -z-10 bg-primary/20 blur-2xl opacity-50 transition-all duration-500;
+}
+
+.glow:hover::after {
+  @apply opacity-75 scale-110;
+}
