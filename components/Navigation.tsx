@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navigation() {
   const [mounted, setMounted] = useState(false);
@@ -33,7 +34,9 @@ export default function Navigation() {
           {/* <a href="#home" className="text-2xl font-bold text-primary">
             4twenty.dev
           </a> */}
+          <Link href={"/"}>
           <Image src="/logo.png" alt="4twenty.dev" width={50} height={40} />
+          </Link>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
