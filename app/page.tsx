@@ -77,8 +77,8 @@ export default function Home() {
               Hi, I&apos;m <span className="text-primary">Brandon</span>
             </h1>
             <p className="text-xl mb-8 text-muted-foreground">
-              Front End Developer specializing in modern web technologies, iOS,
-              and Android app deveopment
+              Graphics Designer, Front End Developer specializing in brand
+              identity, modern web technologies, iOS, and Android app deveopment
             </p>
             <div className="flex gap-4 justify-center">
               <Button size="lg" className="glow">
