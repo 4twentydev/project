@@ -126,7 +126,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] glow rounded-lg overflow-hidden">
               <Image
-                src="/me.JPG"
+                src="/me.jpg"
                 alt="Profile"
                 fill
                 className="object-cover"
